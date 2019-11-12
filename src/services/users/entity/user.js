@@ -9,7 +9,7 @@ module.exports = function buildMakeUser({ fnId, fnValidateEmail })
         status = 1,
     } = {})
     {
-        if(!id.isValidId(id))
+        if(!fnId.isValidId(id))
             throw new Error('User must have a valid id');
 
         if(!name)

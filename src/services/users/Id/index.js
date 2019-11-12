@@ -1,8 +1,6 @@
-import cuid from 'cuid'
+const cuid = require('cuid') 
 
-const Id = Object.freeze({
+module.exports = Object.freeze({
   createId: cuid,
   isValidId: cuid.isCuid
 })
-
-module.exports = Id

@@ -1,7 +1,7 @@
 const Id = require('../Id')
 const buildMakeUser = require('./user');
 
-const makeUser = buildMakeUser({Id,validateEmail})
+const makeUser = buildMakeUser({fnId : Id,fnValidateEmail : validateEmail})
 
 module.exports = makeUser;
 

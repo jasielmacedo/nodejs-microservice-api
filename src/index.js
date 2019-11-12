@@ -28,7 +28,7 @@ app.use(helmet());
 /**** Header Rewrite ****/
 app.disable('x-powered-by');
 
-makeRoutes(express.Router())
+makeRoutes({router : express.Router(), app})
 
 app.listen(port,host);
 console.log('Running in http://'+host+':' + port);
