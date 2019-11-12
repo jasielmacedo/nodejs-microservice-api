@@ -1,4 +1,4 @@
-const makeUserRoutes = require('./users')
+import makeUserRoutes from './users'
 
 module.exports = ({ router }) =>
 {

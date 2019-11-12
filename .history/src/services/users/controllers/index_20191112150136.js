@@ -1,5 +1,5 @@
-const Interactors = require('../interactors')
-const makePostUser = require('./post.user')
+import Interactors from '../interactors'
+import makePostUser from './post.user'
 
 const postUser = makePostUser({ createUser : Interactors.createUser })
 

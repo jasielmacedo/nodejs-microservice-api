@@ -1,4 +1,4 @@
-const makeUser = require('../entity')
+import makeUser from '../entity'
 
 module.exports = function makeDeleteUser({ Db })
 {

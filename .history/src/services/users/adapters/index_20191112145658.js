@@ -1,5 +1,5 @@
-const makeUserDb = require('./user.db')
-const mongodb = require('mongodb')
+import makeUserDb from './user.db'
+import mongodb from 'mongodb'
 
 const MongoClient = mongodb.MongoClient
 
@@ -14,4 +14,4 @@ async function makeDb()
     return client.db(database);
 }
 
-module.exports = makeUserDb(makeDb);
+export default userDb = makeUserDb(makeDb);

@@ -1,5 +1,5 @@
-const Id = require('../Id')
-const buildMakeUser = require('./user');
+import Id from '../Id'
+import buildMakeUser from './user';
 
 const makeUser = buildMakeUser({Id,validateEmail})
 

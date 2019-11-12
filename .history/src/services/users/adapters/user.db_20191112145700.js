@@ -1,8 +1,8 @@
-const Id = require('../Id')
+import Id from '../Id'
 
 const COLLECTION = 'users';
 
-module.exports = function makeUserDb({ makeDb })
+export default function makeUserDb({ makeDb })
 {
     async function findById({ id : _id})
     {

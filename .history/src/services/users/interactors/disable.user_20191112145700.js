@@ -1,6 +1,6 @@
-const makeUser = require('../entity')
+import makeUser from '../entity'
 
-module.exports = function makeDisableUser({ Db })
+export default function makeDisableUser({ Db })
 {
     return async function disableUser({ id } = {})
     {

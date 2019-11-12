@@ -1,6 +1,6 @@
-const makeUser = require('../entity')
+import makeUser from '../entity'
 
-module.exports = function makeViewUser({ Db })
+export default function makeViewUser({ Db })
 {
     return async function viewUser({ id } = {})
     {

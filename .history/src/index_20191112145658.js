@@ -1,8 +1,8 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const helmet = require('helmet')
-const cors = require('cors')
-const makeRoutes = require('./services')
+import express from 'express'
+import bodyParser from 'body-parser'
+import helmet from 'helmet'
+import cors from 'cors'
+import makeRoutes from './services'
 
 var app = express();
 var host = process.env.HOST || "127.0.0.1";
@@ -33,4 +33,4 @@ makeRoutes(express.Router())
 app.listen(port,host);
 console.log('Running in http://'+host+':' + port);
 
-module.exports = app
+export default app

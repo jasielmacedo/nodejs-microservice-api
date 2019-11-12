@@ -1,9 +1,9 @@
-const Id = require('../Id')
-const buildMakeUser = require('./user');
+import Id from '../Id'
+import buildMakeUser from './user';
 
 const makeUser = buildMakeUser({Id,validateEmail})
 
-module.exports = makeUser;
+export default makeUser;
 
 function validateEmail(email)
 {

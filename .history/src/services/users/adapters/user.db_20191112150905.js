@@ -2,7 +2,7 @@ const Id = require('../Id')
 
 const COLLECTION = 'users';
 
-module.exports = function makeUserDb({ makeDb })
+export default function makeUserDb({ makeDb })
 {
     async function findById({ id : _id})
     {

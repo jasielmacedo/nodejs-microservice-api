@@ -1,4 +1,4 @@
-module.exports = function makeCallback(controller)
+export default function makeCallback(controller)
 {
     return (req, res) => {
         const HttpRequest = {

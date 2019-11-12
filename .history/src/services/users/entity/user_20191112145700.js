@@ -1,4 +1,4 @@
-module.exports = function buildMakeUser({ fnId, fnValidateEmail })
+export default function buildMakeUser({ fnId, fnValidateEmail })
 {
     return function makeUser({
         id = fnId.createId(),

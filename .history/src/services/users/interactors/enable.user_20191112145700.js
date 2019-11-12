@@ -1,8 +1,8 @@
-const makeUser = require('../entity')
+import makeUser from '../entity'
 
-module.exports = function makeDisableUser({ Db })
+export default function makeEnableUser({ Db })
 {
-    return async function disableUser({ id } = {})
+    return async function enableUser({ id } = {})
     {
         if(!id){
             throw new Error('You must supply an id')
@@ -16,7 +16,7 @@ module.exports = function makeDisableUser({ Db })
         }
 
         const toEdit = makeUser({ ...current, modifiedAt : null });
-        toEdit.markInative();
+        toEdit.markActive();
 
         const updated = await Db.update({
             id : toEdit.getId(),

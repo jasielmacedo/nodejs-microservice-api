@@ -33,4 +33,4 @@ makeRoutes(express.Router())
 app.listen(port,host);
 console.log('Running in http://'+host+':' + port);
 
-module.exports = app
+export default app

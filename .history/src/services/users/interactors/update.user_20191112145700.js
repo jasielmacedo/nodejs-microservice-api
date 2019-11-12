@@ -1,6 +1,6 @@
-const makeUser = require('../entity')
+import makeUser from '../entity'
 
-module.exports = function makeUpdateUser({ Db })
+export default function makeUpdateUser({ Db })
 {
     return async function updateUser({ id, ...changes } = {})
     {

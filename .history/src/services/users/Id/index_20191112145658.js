@@ -5,4 +5,4 @@ const Id = Object.freeze({
   isValidId: cuid.isCuid
 })
 
-module.exports = Id
+export default Id

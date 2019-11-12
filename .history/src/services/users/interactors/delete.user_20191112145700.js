@@ -1,6 +1,6 @@
-const makeUser = require('../entity')
+import makeUser from '../entity'
 
-module.exports = function makeDeleteUser({ Db })
+export default function makeDeleteUser({ Db })
 {
     return async function deleteUser({ id } = {})
     {

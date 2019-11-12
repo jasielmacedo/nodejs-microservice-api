@@ -1,4 +1,4 @@
-module.exports = function makePostUser({ createUser })
+export default function makePostUser({ createUser })
 {
     return async function PostUser(httpRequest)
     {

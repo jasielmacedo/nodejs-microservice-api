@@ -14,4 +14,4 @@ async function makeDb()
     return client.db(database);
 }
 
-module.exports = makeUserDb(makeDb);
+export default userDb = makeUserDb(makeDb);

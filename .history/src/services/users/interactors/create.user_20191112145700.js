@@ -1,6 +1,6 @@
-const makeUser = require('../entity')
+import makeUser from '../entity/index'
 
-module.exports = function makeCreateUser({ Db })
+export default function makeCreateUser({ Db })
 {
     return async function createUser(userInfo)
     {

@@ -14,7 +14,7 @@ const viewUser = makeViewUser({ userDb })
 const enableUser = makeEnableUser({ userDb })
 const disableUser = makeDisableUser({ userDb })
 
-module.exports = Object.freeze({
+export default Object.freeze({
     createUser,
     updateUser,
     deleteUser,
