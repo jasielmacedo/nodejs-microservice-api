@@ -1,17 +1,26 @@
 const makeUserDb = require('./user.db')
-const mongodb = require('mongodb')
+const userDbModel = require('./user.db.model')
+const mongoose = require('mongoose');
 
-const MongoClient = mongodb.MongoClient
-
-const url = process.env.DB_URL || 'mongodb://localhost:27017'
-const database = process.env.DB_NAMe || 'base'
-const client = new MongoClient(url, { useNewUrlParser : true })
+const url = process.env.DB_URL || 'mongodb://localhost:27017/base'
 
 async function makeDb()
 {
-    if(!client.isConnected())
-        await client.connect()
-    return client.db(database);
+    if(mongoose.connection.readyState != 1)
+    {
+        mongoose.set('useCreateIndex', true);
+        mongoose.set('useFindAndModify', false);
+        mongoose.set('useNewUrlParser', true);
+        await new Promise((resolve,reject) => {
+            mongoose.connect(url, {useNewUrlParser: true}).then(() => {
+                resolve(true);
+            }).catch(e => {
+                reject(e)
+            })
+        })
+    }
+        
+    return userDbModel;
 }
 
 module.exports = makeUserDb({makeDb});

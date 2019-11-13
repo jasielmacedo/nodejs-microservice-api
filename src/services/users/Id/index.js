@@ -1,6 +1,6 @@
-const cuid = require('cuid') 
+const mongoose = require('mongoose');
 
 module.exports = Object.freeze({
-  createId: cuid,
-  isValidId: cuid.isCuid
+  createId: () => mongoose.Types.ObjectId(),
+  isValidId: mongoose.Types.ObjectId.isValid
 })

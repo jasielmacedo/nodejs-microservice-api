@@ -15,6 +15,7 @@ module.exports = function makeUpdateUser({ Db })
 
         const current = await Db.findById({ id })
 
+        console.log(current)
         if(changes.email && changes.email != current.email)
         {
             const existsEmail = await Db.findByEmail({ email : changes.email })

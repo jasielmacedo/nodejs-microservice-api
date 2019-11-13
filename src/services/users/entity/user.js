@@ -21,6 +21,9 @@ module.exports = function buildMakeUser({ fnId, fnValidateEmail })
         if(!email || !fnValidateEmail(email))
             throw new Error("User's email must be valid");
 
+        if(!modifiedAt)
+            modifiedAt = Date.now()
+
         return Object.freeze({
             getId : () => id,
             getName : () => name,
