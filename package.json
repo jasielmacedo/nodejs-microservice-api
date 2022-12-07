@@ -10,12 +10,12 @@
         "start": "npm run clean && npm run build && cd dist && node index.js"
     },
     "dependencies": {
-        "body-parser": "^1.18.3",
+        "body-parser": "^1.20.1",
         "bson": "^4.0.2",
         "cookie-parser": "^1.4.4",
         "cors": "^2.8.5",
         "cuid": "^2.1.6",
-        "express": "^4.17.1",
+        "express": "^4.18.2",
         "express-session": "^1.16.2",
         "helmet": "^3.21.1",
         "mongodb": "^3.1.13",
